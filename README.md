@@ -24,7 +24,17 @@ logger.start({sentryUrl: 'https://examplePublicKey@o0.ingest.sentry.io/0', env: 
 import mongoose from 'mongoose';
 import { middlewares } from 'sc-common';
 
-await middlewares.database.configureDatabase(mongoose, config);
+await middlewares.database.configureDatabase(
+    mongoose, 
+    {
+        url: 'mongodb://localhost:27017', 
+        options: {
+            dbName: 'minigame',
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            auto_reconnect: true,
+        }
+    });
 ```
 
 ## License
