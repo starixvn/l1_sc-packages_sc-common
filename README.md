@@ -1,6 +1,6 @@
 # sc-common
 
-sc-common contains common helpers, middlewware and utils
+sc-common contains common helpers, middlewares and utils
 
 ## Installation
 
