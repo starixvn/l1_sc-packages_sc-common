@@ -86,6 +86,19 @@ const sentryLogger = {
             Sentry.captureMessage(joinedMessages, logLevel);
         }
     },
+
+    setTag: (tag) => {
+        if (tag) {
+            try {
+                Sentry.configureScope(function (scope) {
+                    scope.setTag(tag.id, tag.value);
+                });
+            }
+            catch (ex) {
+                console.log(ex);
+            }
+        }
+    },
 };
 
 export default sentryLogger;
