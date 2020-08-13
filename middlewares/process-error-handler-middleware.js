@@ -24,7 +24,11 @@ export const exitHandler = terminate({
     timeout: 500,
 });
 
-export const handle = (process, server) => {
+export const handle = (server, process) => {
+    process.on("exit", () => {
+        logger.logError("server is stopped!!!!");
+        console.log("Exit happened!");
+    });
     process.on('uncaughtException', exitHandler(server, 1, 'Unexpected Error'));
     process.on('unhandledRejection', exitHandler(server, 1, 'Unhandled Promise'));
     process.on('SIGTERM', exitHandler(server, 0, 'SIGTERM'));
