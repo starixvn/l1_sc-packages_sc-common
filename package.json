@@ -10,7 +10,8 @@
         "verminor": "npm version minor",
         "pub": "npm publish --registry http://npm.lumigame.com",
         "pubbeta": "npm publish --registry http://npm.lumigame.com --tag beta",
-        "unpublish": "npm unpublish --force sc-common"
+        "unpublish": "npm unpublish --force sc-common",
+        "semantic-release": "semantic-release"
     },
     "author": {
         "email": "harrison.nguyen@luminetsoft.com",
@@ -23,5 +24,64 @@
         "jwks-rsa": "^1.8.1",
         "mongoose-long": "^0.3.0",
         "numeral": "^2.0.6"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^9.1.2",
+        "@commitlint/config-conventional": "^9.1.2",
+        "@semantic-release/changelog": "^5.0.1",
+        "@semantic-release/commit-analyzer": "^8.0.1",
+        "@semantic-release/git": "^9.0.0",
+        "@semantic-release/gitlab": "^6.0.4",
+        "@semantic-release/npm": "^7.0.5",
+        "@semantic-release/release-notes-generator": "^9.0.1",
+        "husky": "^4.2.5",
+        "install": "^0.13.0",
+        "semantic-release": "^17.1.1"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "release": {
+        "plugins": [
+            [
+                "@semantic-release/commit-analyzer",
+                {
+                    "releaseRules": [
+                        {
+                            "type": "docs",
+                            "scope": "README",
+                            "release": "patch"
+                        },
+                        {
+                            "type": "refactor",
+                            "release": "patch"
+                        }
+                    ],
+                    "parserOpts": {
+                        "noteKeywords": [
+                            "BREAKING CHANGE",
+                            "BREAKING CHANGES"
+                        ]
+                    }
+                }
+            ],
+            "@semantic-release/release-notes-generator",
+            "@semantic-release/changelog",
+            "@semantic-release/npm",
+            {
+                "path": "@semantic-release/git",
+                "assets": [
+                    "package.json",
+                    "package-lock.json",
+                    "CHANGELOG.md"
+                ],
+                "message": "chore(release): ${nextRelease.version} [skip ci]nn${nextRelease.notes}"
+            }
+        ],
+        "branches": [
+            "master"
+        ]
     }
 }
