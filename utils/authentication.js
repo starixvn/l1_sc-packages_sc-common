@@ -1,6 +1,6 @@
-import logger from '../logger/index.js';
 import jwt from 'jsonwebtoken';
 import jwksClient from 'jwks-rsa';
+import logger from '../logger/index.js';
 
 const getTokenFromHeaders = (req) => {
     const tokenType = 'Bearer';
