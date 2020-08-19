@@ -1,3 +1,10 @@
+## [1.4.2-dev-tempUpdate.1](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.4.1...v1.4.2-dev-tempUpdate.1) (2020-08-19)
+
+
+### Bug Fixes
+
+* update release ([d638fe9](https://git3.nexdev.net/sc-packages/sc-common/commit/d638fe956c9e41bc005a2ab043c29bebd8badb18))
+
 ## [1.4.1](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.4.0...v1.4.1) (2020-08-19)
 
 
