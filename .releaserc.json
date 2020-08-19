@@ -40,6 +40,14 @@
         }
     ],
     "branches": [
-        "master"
+        "master",
+        {
+            "name": "beta",
+            "prerelease": true
+        },
+        {
+            "name": "dev-*",
+            "prerelease": true
+        }
     ]
 }
