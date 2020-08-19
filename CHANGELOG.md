@@ -1,3 +1,17 @@
+# [1.4.0](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.3.2...v1.4.0) (2020-08-19)
+
+
+### Features
+
+* add commit lint ([64d2c74](https://git3.nexdev.net/sc-packages/sc-common/commit/64d2c74e608c501ad3dfbe2b0da6264b26785e67))
+
+# [1.4.0](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.3.2...v1.4.0) (2020-08-19)
+
+
+### Features
+
+* add commit lint ([64d2c74](https://git3.nexdev.net/sc-packages/sc-common/commit/64d2c74e608c501ad3dfbe2b0da6264b26785e67))
+
 # 1.3.0 / 2020-08-01
 
 -   First release after seperate sedie out of game server
