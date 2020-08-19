@@ -1,3 +1,10 @@
+## [1.4.1](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.4.0...v1.4.1) (2020-08-19)
+
+
+### Bug Fixes
+
+* authentication ([b0d689e](https://git3.nexdev.net/sc-packages/sc-common/commit/b0d689e5d6676cb851c3aa1c0522406a516d753d))
+
 # [1.4.0](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.3.2...v1.4.0) (2020-08-19)
 
 
