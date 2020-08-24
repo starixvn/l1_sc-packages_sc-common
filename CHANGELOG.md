@@ -1,3 +1,10 @@
+## [1.4.2-dev-tempUpdate.2](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.4.2-dev-tempUpdate.1...v1.4.2-dev-tempUpdate.2) (2020-08-24)
+
+
+### Bug Fixes
+
+* use sc-semantic-release package ([ff279f0](https://git3.nexdev.net/sc-packages/sc-common/commit/ff279f0a770611154dfcccc68448ae208a628968))
+
 ## [1.4.2-dev-tempUpdate.1](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.4.1...v1.4.2-dev-tempUpdate.1) (2020-08-19)
 
 
