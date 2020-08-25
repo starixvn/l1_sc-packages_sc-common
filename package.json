@@ -1,6 +1,6 @@
 {
     "name": "sc-common",
-    "version": "1.4.4",
+    "version": "1.4.5-dev-tempUpdate.1",
     "description": "",
     "main": "index.js",
     "scripts": {
