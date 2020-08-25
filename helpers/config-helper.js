@@ -14,10 +14,10 @@ export const getMaxBotForCurrentHour = (configs) => {
 
 export const convertBetChoiceName = (name) => {
     switch (name) {
-        case 'chan':
-            return 'even';
-        case 'le':
-            return 'odd';
+        case "chan":
+            return "even";
+        case "le":
+            return "odd";
         default:
             return name;
     }

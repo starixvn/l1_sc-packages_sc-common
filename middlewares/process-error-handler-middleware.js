@@ -1,4 +1,4 @@
-import logger from '../logger/index.js';
+import logger from "./../logger";
 
 export const terminate = (options = { coredump: false, timeout: 500 }) => {
     // Exit function
@@ -29,8 +29,8 @@ export const handle = (server, process) => {
         logger.logError("server is stopped!!!!");
         console.log("Exit happened!");
     });
-    process.on('uncaughtException', exitHandler(server, 1, 'Unexpected Error'));
-    process.on('unhandledRejection', exitHandler(server, 1, 'Unhandled Promise'));
-    process.on('SIGTERM', exitHandler(server, 0, 'SIGTERM'));
-    process.on('SIGINT', exitHandler(server, 0, 'SIGINT'));
+    process.on("uncaughtException", exitHandler(server, 1, "Unexpected Error"));
+    process.on("unhandledRejection", exitHandler(server, 1, "Unhandled Promise"));
+    process.on("SIGTERM", exitHandler(server, 0, "SIGTERM"));
+    process.on("SIGINT", exitHandler(server, 0, "SIGINT"));
 };

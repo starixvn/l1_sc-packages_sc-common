@@ -1,7 +1,7 @@
-import numeral from 'numeral';
+import numeral from "numeral";
 
 export const formatNumberWithComma = (number) => {
-    return numeral(number).format('0,0');
+    return numeral(number).format("0,0");
 };
 
 export const getRandomNumberStep5 = (min, max, isUseChips) => {
@@ -11,7 +11,7 @@ export const getRandomNumberStep5 = (min, max, isUseChips) => {
         return randomAmount;
     }
 
-    let step = 5;
+    let step;
 
     if (randomAmount < 50) {
         step = 5;

@@ -1,15 +1,16 @@
-import jwt from 'jsonwebtoken';
-import jwksClient from 'jwks-rsa';
-import logger from '../logger/index.js';
+import jwt from "jsonwebtoken";
+import jwksClient from "jwks-rsa";
+
+import logger from "./../logger";
 
 const getTokenFromHeaders = (req) => {
-    const tokenType = 'Bearer';
+    const tokenType = "Bearer";
     const {
         headers: { authorization },
     } = req;
 
-    if (authorization && authorization.split(' ')[0] === tokenType) {
-        return authorization.split(' ')[1];
+    if (authorization && authorization.split(" ")[0] === tokenType) {
+        return authorization.split(" ")[1];
     }
     return null;
 };
@@ -26,7 +27,7 @@ const getSignInKey = (client) => (header, callback) => {
 };
 
 export const useAuthenticate = ({ authUrl, audiences }) => {
-    const jwks = '.well-known/openid-configuration/jwks';
+    const jwks = ".well-known/openid-configuration/jwks";
     const jwksUri = new URL(jwks, authUrl).href;
     const client = jwksClient({ jwksUri });
 

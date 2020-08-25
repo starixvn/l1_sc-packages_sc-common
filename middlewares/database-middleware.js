@@ -1,39 +1,40 @@
-import mongooseLong from 'mongoose-long';
-import logger from '../logger/index.js';
+import mongooseLong from "mongoose-long";
 
-export const configureDatabase = async (mongoose, { url = '', options = {} }) => {
+import logger from "./../logger";
+
+export const configureDatabase = async (mongoose, { url = "", options = {} }) => {
     mongooseLong(mongoose);
-    mongoose.set('useFindAndModify', false);
-    mongoose.set('useCreateIndex', true);
+    mongoose.set("useFindAndModify", false);
+    mongoose.set("useCreateIndex", true);
     await mongoose
         .connect(url, options)
         .then(() => {
-            console.log('Connect to MongoDB success ' + url);
+            console.log("Connect to MongoDB success " + url);
         })
         .catch((error) => {
-            console.log('Connect to MongoDB failed', error);
+            console.log("Connect to MongoDB failed", error);
             logger.logError(error);
         });
 
-    mongoose.connection.once('open', function () {
-        console.log('MongoDB database connection established successfully');
+    mongoose.connection.once("open", function () {
+        console.log("MongoDB database connection established successfully");
     });
 
-    mongoose.connection.on('connected', () => {
+    mongoose.connection.on("connected", () => {
         const message = `MongoDB connected at ${new Date()}`;
         logger.log(message);
     });
 
-    mongoose.connection.on('reconnected', () => {
+    mongoose.connection.on("reconnected", () => {
         const message = `MongoDB reconnected at ${new Date()}`;
         logger.logWarning(message);
     });
 
-    mongoose.connection.on('disconnected', () => {
+    mongoose.connection.on("disconnected", () => {
         logger.logWarning(`MongoDB disconnected at ${new Date()}`);
     });
 
-    mongoose.connection.on('error', (err) => {
+    mongoose.connection.on("error", (err) => {
         logger.logError(err);
     });
 };

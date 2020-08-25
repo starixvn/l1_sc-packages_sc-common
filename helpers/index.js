@@ -1,8 +1,8 @@
-import * as arrayHelper from './array-helper.js';
-import * as chipHelper from './chip-helper.js';
-import noticeHelper from './notice-helper.js';
-import * as numberHelper from './number-helper.js';
-import * as configHelper from './config-helper.js';
+import * as arrayHelper from "./array-helper";
+import * as chipHelper from "./chip-helper";
+import * as configHelper from "./config-helper";
+import noticeHelper from "./notice-helper";
+import * as numberHelper from "./number-helper";
 
 export default {
     numberHelper,

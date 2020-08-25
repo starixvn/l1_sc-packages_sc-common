@@ -14,8 +14,8 @@
         "semantic-release": "semantic-release"
     },
     "author": {
-        "email": "harrison.nguyen@luminetsoft.com",
-        "name": "harrison.nguyen"
+        "email": "pentagon@luminetsoft.com",
+        "name": "pentagon"
     },
     "type": "module",
     "dependencies": {
