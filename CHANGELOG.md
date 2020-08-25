@@ -1,3 +1,5 @@
+## [1.4.3](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.4.2...v1.4.3) (2020-08-25)
+
 ## [1.4.2](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.4.1...v1.4.2) (2020-08-24)
 
 
