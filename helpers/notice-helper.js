@@ -13,4 +13,5 @@ export default {
     closeAccount: "Tài khoản đã bị đóng. Phiên đăng nhập sẽ hết hạn sau 10 giây. Vui lòng liên hệ với cấp trên để biết thêm chi tiết.",
     unauthorized: "Đăng nhập thất bại!",
     underMaintenance: "Game đang được bảo trì, vui lòng quay lại sau 10 phút.",
+    notEnoughScoin: "Bạn hiện không có đủ Scoin để cược.",
 };
