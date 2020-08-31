@@ -1,6 +1,6 @@
 {
     "name": "sc-common",
-    "version": "1.4.5-dev-FreeBet.1",
+    "version": "1.4.6-dev-FreeBet.1",
     "description": "",
     "main": "index.js",
     "scripts": {
