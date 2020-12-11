@@ -14,4 +14,8 @@ export default {
     unauthorized: "Đăng nhập thất bại!",
     underMaintenance: "Game đang được bảo trì, vui lòng quay lại sau 10 phút.",
     notEnoughScoin: "Bạn hiện không có đủ Scoin để cược.",
+    invalidPaylines: "Dòng cược không hợp lệ.",
+    invalidFreeSpin: "Lượt quay Free Spin không hợp lệ.",
+    invalidStakeLevel: "Mức cược không hợp lệ.",
+    invalidBonus: "Lượt chơi Bonus không hợp lệ.",
 };
