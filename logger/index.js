@@ -58,14 +58,12 @@ const sentryLogger = {
         }
     },
 
-    composeBeforeCallMessage: (session, params, enabledApiLog) => {
+    composeBeforeCallMessage: (session, params) => {
         try {
-            if (enabledApiLog) {
-                const characterName = session && session.characterName ? `\n\tCharacter: ${session.characterName} ` : "";
-                return `Before Action at ${new Date()}: \n\tSession: ${JSON.stringify(session)} ${characterName}\n\tParams:${JSON.stringify(
-                    params
-                )}`;
-            }
+            const characterName = session && session.characterName ? `\n\tCharacter: ${session.characterName} ` : "";
+            return `Before Action at ${new Date()}: \n\tSession: ${JSON.stringify(session)} ${characterName}\n\tParams:${JSON.stringify(
+                params
+            )}`;
         } catch (error) {
             sentryLogger.logError(error);
         }
