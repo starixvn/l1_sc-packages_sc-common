@@ -19,4 +19,5 @@ export default {
     invalidStakeLevel: "Mức cược không hợp lệ.",
     invalidBonus: "Lượt chơi Bonus không hợp lệ.",
     openedBonus: "Rương thưởng không hợp lệ.",
+    notPermittedToPlay: (gameName) => `Tài khoản của bạn hiện đang bị giới hạn với trò ${gameName}. Vui lòng thử các trò chơi khác.`
 };
