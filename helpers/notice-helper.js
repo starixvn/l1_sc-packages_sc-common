@@ -14,10 +14,5 @@ export default {
     unauthorized: "Đăng nhập thất bại!",
     underMaintenance: "Game đang được bảo trì, vui lòng quay lại sau 10 phút.",
     notEnoughScoin: "Bạn hiện không có đủ Scoin để cược.",
-    invalidPaylines: "Dòng cược không hợp lệ.",
-    invalidFreeSpin: "Lượt quay Free Spin không hợp lệ.",
-    invalidStakeLevel: "Mức cược không hợp lệ.",
-    invalidBonus: "Lượt chơi Bonus không hợp lệ.",
-    openedBonus: "Rương thưởng không hợp lệ.",
-    notPermittedToPlay: (gameName) => `Tài khoản của bạn hiện đang bị giới hạn với trò ${gameName}. Vui lòng thử các trò chơi khác.`
+    notPermittedToPlay: (gameName) => `Tài khoản của bạn hiện đang bị giới hạn với trò ${gameName}. Vui lòng thử các trò chơi khác.`,
 };
