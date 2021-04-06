@@ -1,3 +1,10 @@
+## [1.5.1](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.5.0...v1.5.1) (2021-04-06)
+
+
+### Bug Fixes
+
+* remove param enabledApiLog out composeBeforeCallMessage ([3841cf2](https://git3.nexdev.net/sc-packages/sc-common/commit/3841cf2a587a9f620e0f3756637f883a027fbdfa))
+
 # [1.5.0](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.4.5...v1.5.0) (2020-09-16)
 
 
