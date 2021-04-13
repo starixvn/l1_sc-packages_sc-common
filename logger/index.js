@@ -11,6 +11,7 @@ const sentryLogger = {
             release: sentryRelease ? "game-server@" + sentryRelease : "",
         });
         identifier = logIdentifier;
+        Sentry.setTag("game_service", logIdentifier);
         Sentry.captureMessage(`Logger started at ${new Date()}`);
     },
 
