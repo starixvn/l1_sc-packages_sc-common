@@ -1,3 +1,10 @@
+# [1.6.0](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.5.1...v1.6.0) (2021-04-15)
+
+
+### Features
+
+* sentry - add game_service tag ([fd68f31](https://git3.nexdev.net/sc-packages/sc-common/commit/fd68f31aa34e47b16b4c15521d76611fbe555284))
+
 ## [1.5.1](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.5.0...v1.5.1) (2021-04-06)
 
 
