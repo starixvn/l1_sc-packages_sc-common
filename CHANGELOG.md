@@ -4,6 +4,20 @@
 ### Bug Fixes
 
 * add error code for insufficient balance ([f15d490](https://git3.nexdev.net/sc-packages/sc-common/commit/f15d49032133b34364a94dcb368fb0cafdee4368))
+* format code ([a6a12db](https://git3.nexdev.net/sc-packages/sc-common/commit/a6a12db8500bda3fa43df1a0e896761c8f2a359b))
+* maxBet errorCode ([0daf8a1](https://git3.nexdev.net/sc-packages/sc-common/commit/0daf8a1b3e47683636f730ef5c0d68c7d6d09993))
+
+
+### Features
+
+* update error codes ([80b27e2](https://git3.nexdev.net/sc-packages/sc-common/commit/80b27e2c66e6e36f65900493018c330d45c6e025))
+
+# [1.7.0](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.6.0...v1.7.0) (2021-06-09)
+
+
+### Bug Fixes
+
+* add error code for insufficient balance ([f15d490](https://git3.nexdev.net/sc-packages/sc-common/commit/f15d49032133b34364a94dcb368fb0cafdee4368))
 * maxBet errorCode ([0daf8a1](https://git3.nexdev.net/sc-packages/sc-common/commit/0daf8a1b3e47683636f730ef5c0d68c7d6d09993))
 
 
