@@ -8,4 +8,5 @@ export default {
     invalidBet: "SB1935",
     youOrOtherLoggedInToThisAccount: "SB0003",
     notEnoughScoin: "SB1908",
+    disallowHedgeBet: "SB1939",
 };

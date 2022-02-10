@@ -1,16 +1,16 @@
 {
     "name": "sc-common",
-    "version": "1.7.0",
+    "version": "1.7.1-beta.0",
     "description": "",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "reg": "npm set registry http://npm.lumigame.com",
+        "reg": "npm set registry https://npm.lumigame.com",
         "verpatch": "npm version patch",
         "verminor": "npm version minor",
         "betaver": "npm version prerelease --preid beta",
-        "pub": "npm publish --registry http://npm.lumigame.com",
-        "pubbeta": "npm publish --registry http://npm.lumigame.com --tag beta",
+        "pub": "npm publish --registry https://npm.lumigame.com",
+        "pubbeta": "npm publish --registry https://npm.lumigame.com --tag beta",
         "unpublish": "npm unpublish --force sc-common",
         "semantic-release": "semantic-release"
     },
