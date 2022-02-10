@@ -1,3 +1,10 @@
+# [1.8.0](https://git3.nexdev.net/l1/sc-packages/sc-common/compare/v1.7.0...v1.8.0) (2022-02-10)
+
+
+### Features
+
+* add disallow hedge bet notice ([881611b](https://git3.nexdev.net/l1/sc-packages/sc-common/commit/881611b5f389ed5acf3f201d1f7702e43c1d48d5))
+
 # [1.7.0](https://git3.nexdev.net/sc-packages/sc-common/compare/v1.6.0...v1.7.0) (2021-06-09)
 
 
