@@ -1,3 +1,11 @@
+## [1.8.1](https://git3.nexdev.net/l1/sc-packages/sc-common/compare/v1.8.0...v1.8.1) (2022-05-05)
+
+
+### Bug Fixes
+
+* log warning info ([ed90376](https://git3.nexdev.net/l1/sc-packages/sc-common/commit/ed903760e3b5387847795148347a4e1a2b164796))
+* upgrade schema ([5de8a74](https://git3.nexdev.net/l1/sc-packages/sc-common/commit/5de8a7430f242daee744a5f1eaa493bed3eae2a2))
+
 # [1.8.0](https://git3.nexdev.net/l1/sc-packages/sc-common/compare/v1.7.0...v1.8.0) (2022-02-10)
 
 
