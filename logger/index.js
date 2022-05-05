@@ -74,7 +74,7 @@ const sentryLogger = {
     logAfterSendToApi: (action, params, result, beforeMessage, logLevel, enabledApiLog) => {
         if (enabledApiLog) {
             const messages = [
-                `Account ${params.SiteId}_${params.ObCustId} performs ${action} at ${new Date()}`,
+                `Account ${params.SiteId}_${params.PlayerId} performs ${action} at ${new Date()}`,
                 "",
                 beforeMessage,
                 `\nAction Result: ${JSON.stringify(result)}`,

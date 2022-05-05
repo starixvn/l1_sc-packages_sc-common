@@ -36,13 +36,13 @@ export const useAuthenticate = ({ authUrl, audiences }) => {
 
         jwt.verify(token, getSignInKey(client), { ignoreNotBefore: true }, (error, result) => {
             if (error) {
-                logger.logWarning({ url: req.url, error: error });
+                logger.logWarning(JSON.stringify({ url: req.url, error: error }));
                 res.sendStatus(401);
             } else {
                 if (audiences.includes(result.aud)) {
                     next();
                 } else {
-                    logger.logWarning({ token: result, audiences });
+                    logger.logWarning(JSON.stringify({ token: result, audiences }));
                     res.sendStatus(401);
                 }
             }
