@@ -27,11 +27,11 @@ export const configureDatabase = async (mongoose, { url = "", options = {} }) =>
 
     mongoose.connection.on("reconnected", () => {
         const message = `MongoDB reconnected at ${new Date()}`;
-        logger.logWarning(message);
+        logger.logError(message);
     });
 
     mongoose.connection.on("disconnected", () => {
-        logger.logWarning(`MongoDB disconnected at ${new Date()}`);
+        logger.logError(`MongoDB disconnected at ${new Date()}`);
     });
 
     mongoose.connection.on("error", (err) => {
