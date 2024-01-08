@@ -3,14 +3,17 @@ import Sentry from "@sentry/node";
 let identifier = "";
 
 const sentryLogger = {
-    start: ({ sentryUrl = "", env = "", sentryRelease = "", logIdentifier = "" }) => {
+    start: ({ sentryUrl = "", env = "", sentryRelease = "", logIdentifier = "", httpTrace = true, tracesSampleRate = 1.0 }) => {
         Sentry.init({
             dsn: sentryUrl,
             maxValueLength: 5000,
             environment: env,
             release: sentryRelease ? "game-server@" + sentryRelease : "",
+            integrations: [new Sentry.Integrations.Http({ tracing: httpTrace })],
+            tracesSampleRate,
         });
         identifier = logIdentifier;
+
         Sentry.setTag("game_service", logIdentifier);
         Sentry.captureMessage(`Logger started at ${new Date()}`);
     },
@@ -88,7 +91,7 @@ const sentryLogger = {
     setTag: (tag) => {
         if (tag) {
             try {
-                Sentry.configureScope(function (scope) {
+                Sentry.withScope(function (scope) {
                     scope.setTag(tag.id, tag.value);
                 });
             } catch (ex) {
