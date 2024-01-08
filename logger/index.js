@@ -3,7 +3,7 @@ import Sentry from "@sentry/node";
 let identifier = "";
 
 const sentryLogger = {
-    start: ({ sentryUrl = "", env = "", sentryRelease = "", logIdentifier = "", httpTrace = true, tracesSampleRate = 1.0 }) => {
+    start: ({ sentryUrl = "", env = "", sentryRelease = "", logIdentifier = "", httpTrace = true, tracesSampleRate = 0.1 }) => {
         Sentry.init({
             dsn: sentryUrl,
             maxValueLength: 5000,
