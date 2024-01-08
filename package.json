@@ -20,7 +20,7 @@
     },
     "type": "module",
     "dependencies": {
-        "@sentry/node": "^5.19.1",
+        "@sentry/node": "7.92.0",
         "jsonwebtoken": "^8.5.1",
         "jwks-rsa": "^1.8.1",
         "mongoose-long": "^0.3.0",
