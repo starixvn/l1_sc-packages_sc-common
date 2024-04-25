@@ -9,4 +9,5 @@ export default {
     youOrOtherLoggedInToThisAccount: "SB0003",
     notEnoughScoin: "SB1908",
     disallowHedgeBet: "SB1939",
+    reachMaxPayout: "SB1940",
 };
