@@ -12,7 +12,9 @@
         "pub": "npm publish --registry https://npm.lumigame.com",
         "pubbeta": "npm publish --registry https://npm.lumigame.com --tag beta",
         "unpublish": "npm unpublish --force sc-common",
-        "semantic-release": "semantic-release"
+        "semantic-release": "semantic-release",
+        "prepare": "husky",
+        "commitlint": "commitlint --edit"
     },
     "author": {
         "email": "pentagon@luminetsoft.com",
@@ -38,10 +40,5 @@
         "husky": "9.1.7",
         "sc-semantic-release": "^1.2.0",
         "semantic-release": "24.2.7"
-    },
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
     }
 }
