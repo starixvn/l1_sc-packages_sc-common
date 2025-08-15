@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Add any pre-commit checks here if needed
+# For example: npm run lint, npm run test, etc.

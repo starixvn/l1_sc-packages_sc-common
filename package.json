@@ -20,25 +20,24 @@
     },
     "type": "module",
     "dependencies": {
-        "@sentry/node": "7.92.0",
-        "jsonwebtoken": "^8.5.1",
-        "jwks-rsa": "^1.8.1",
-        "mongoose-long": "^0.3.0",
-        "numeral": "^2.0.6"
+        "@sentry/node": "10.5.0",
+        "jsonwebtoken": "9.0.2",
+        "jwks-rsa": "3.2.0",
+        "mongoose-long": "0.8.0",
+        "numeral": "2.0.6"
     },
     "devDependencies": {
-        "@commitlint/cli": "^9.1.2",
-        "@commitlint/config-conventional": "^9.1.2",
-        "@semantic-release/changelog": "^5.0.1",
-        "@semantic-release/commit-analyzer": "^8.0.1",
-        "@semantic-release/git": "^9.0.0",
-        "@semantic-release/gitlab": "^6.0.4",
-        "@semantic-release/npm": "^7.0.5",
-        "@semantic-release/release-notes-generator": "^9.0.1",
-        "husky": "^4.2.5",
-        "install": "^0.13.0",
+        "@commitlint/cli": "19.8.1",
+        "@commitlint/config-conventional": "19.8.1",
+        "@semantic-release/changelog": "6.0.3",
+        "@semantic-release/commit-analyzer": "13.0.1",
+        "@semantic-release/git": "10.0.1",
+        "@semantic-release/gitlab": "13.2.6",
+        "@semantic-release/npm": "12.0.2",
+        "@semantic-release/release-notes-generator": "14.0.3",
+        "husky": "9.1.7",
         "sc-semantic-release": "^1.2.0",
-        "semantic-release": "^17.1.1"
+        "semantic-release": "24.2.7"
     },
     "husky": {
         "hooks": {
