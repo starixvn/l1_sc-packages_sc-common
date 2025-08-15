@@ -1,6 +1,6 @@
 {
     "name": "sc-common",
-    "version": "1.8.1",
+    "version": "1.8.3-beta.0",
     "description": "",
     "main": "index.js",
     "scripts": {
