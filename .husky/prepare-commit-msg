@@ -1,0 +1,7 @@
+# This hook is called with the following parameters:
+# $1 - the name of the file that contains the commit log message
+# $2 - the source of the commit message (message, template, merge, squash or commit)
+# $3 - the SHA1 of the commit (only for commit, merge, squash or commit)
+
+# You can use this hook to modify the commit message before it's committed
+# For example, you could add a prefix or validate the format
