@@ -4,8 +4,6 @@ import logger from "./../logger";
 
 export const configureDatabase = async (mongoose, { url = "", options = {} }) => {
     mongooseLong(mongoose);
-    mongoose.set("useFindAndModify", false);
-    mongoose.set("useCreateIndex", true);
     await mongoose
         .connect(url, options)
         .then(() => {
