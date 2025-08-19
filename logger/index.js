@@ -1,21 +1,21 @@
-import Sentry from "@sentry/node";
+import { init, captureException, captureMessage, setTag, httpIntegration } from "@sentry/node";
 
 let identifier = "";
 
 const sentryLogger = {
     start: ({ sentryUrl = "", env = "", sentryRelease = "", logIdentifier = "", httpTrace = true, tracesSampleRate = 0.1 }) => {
-        Sentry.init({
+        init({
             dsn: sentryUrl,
             maxValueLength: 5000,
             environment: env,
             release: sentryRelease ? "game-server@" + sentryRelease : "",
-            integrations: [new Sentry.Integrations.Http({ tracing: httpTrace })],
+            integrations: [httpIntegration({ tracing: httpTrace })],
             tracesSampleRate,
         });
         identifier = logIdentifier;
 
-        Sentry.setTag("game_service", logIdentifier);
-        Sentry.captureMessage(`Logger started at ${new Date()}`);
+        setTag("game_service", logIdentifier);
+        captureMessage(`Logger started at ${new Date()}`);
     },
 
     log: (message, level = "info") => {
@@ -25,7 +25,7 @@ const sentryLogger = {
             return;
         }
 
-        Sentry.captureMessage(messageLog, level);
+        captureMessage(messageLog, level);
     },
 
     logWarning: (message) => {
@@ -58,7 +58,7 @@ const sentryLogger = {
                 exception = `Exception is null at ${new Date()}`;
             }
 
-            Sentry.captureException(exception);
+            captureException(exception);
         }
     },
 
@@ -84,7 +84,7 @@ const sentryLogger = {
             ];
 
             const joinedMessages = messages.join("\n");
-            Sentry.captureMessage(joinedMessages, logLevel);
+            captureMessage(joinedMessages, logLevel);
         }
     },
 
