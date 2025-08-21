@@ -1,15 +1,21 @@
-import { init, captureException, captureMessage, setTag, httpIntegration } from "@sentry/node";
+import { init, captureException, captureMessage, setTag, httpIntegration, mongooseIntegration } from "@sentry/node";
 
 let identifier = "";
 
 const sentryLogger = {
-    start: ({ sentryUrl = "", env = "", sentryRelease = "", logIdentifier = "", httpTrace = true, tracesSampleRate = 0.1 }) => {
+    start: ({ sentryUrl = "", env = "", sentryRelease = "", logIdentifier = "", tracesSampleRate = 0.1, mongooseTrace = true }) => {
+        let traceIntegrations = [httpIntegration({ ignoreStaticAssets: true })];
+
+        if (mongooseTrace) {
+            traceIntegrations.push(mongooseIntegration());
+        }
+
         init({
             dsn: sentryUrl,
             maxValueLength: 5000,
             environment: env,
             release: sentryRelease ? "game-server@" + sentryRelease : "",
-            integrations: [httpIntegration({ tracing: httpTrace })],
+            integrations: traceIntegrations,
             tracesSampleRate,
         });
         identifier = logIdentifier;
