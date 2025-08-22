@@ -1,6 +1,6 @@
 {
     "name": "sc-common",
-    "version": "3.0.0-beta.2",
+    "version": "3.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
@@ -11,7 +11,6 @@
         "betaver": "npm version prerelease --preid beta",
         "pub": "npm publish --registry https://npm.lumigame.com",
         "pubbeta": "npm publish --registry https://npm.lumigame.com --tag beta",
-        "unpublish": "npm unpublish --force sc-common",
         "semantic-release": "semantic-release",
         "prepare": "husky",
         "commitlint": "commitlint --edit"
